@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="83577b8a-9c64-4c8b-89f0-5440d87f121f" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Principal.java" afterPath="$PROJECT_DIR$/src/Principal.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/mapaDasHabilidadesDoAluno.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/mapaDasQuestoesDoAluno.java" />
+      <change type="DELETED" beforePath="C:\Users\Alisson\Documents\GitHub\ImpressoraDeHabilidades\src\Linha.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Alisson\Documents\GitHub\ImpressoraDeHabilidades\src\Rascunho.java" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="ImpressoraDeHabilidades.iws" />
@@ -26,11 +29,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Principal.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Principal.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Principal.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.73492604" vertical-offset="1020" max-vertical-offset="2108">
-              <caret line="98" column="61" selection-start-line="98" selection-start-column="61" selection-end-line="98" selection-end-column="61" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="867" max-vertical-offset="2108">
+              <caret line="100" column="0" selection-start-line="100" selection-start-column="0" selection-end-line="100" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -48,26 +51,27 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Linha.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Linha.java">
+      <file leaf-file-name="mapaDasQuestoesDoAluno.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/mapaDasQuestoesDoAluno.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="459">
-              <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
-              <folding />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="272">
+              <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+              <folding>
+                <element signature="e#172#173#0" expanded="true" />
+                <element signature="e#218#219#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Rascunho.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Rascunho.java">
+      <file leaf-file-name="mapaDasHabilidadesDoAluno.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/mapaDasHabilidadesDoAluno.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="306">
-              <caret line="8" column="32" selection-start-line="8" selection-start-column="32" selection-end-line="8" selection-end-column="32" />
+            <state vertical-scroll-proportion="0.21274175" vertical-offset="0" max-vertical-offset="879">
+              <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
               <folding>
-                <element signature="e#94#95#0" expanded="false" />
-                <element signature="e#134#135#0" expanded="false" />
-                <element signature="e#246#247#0" expanded="false" />
-                <element signature="e#286#287#0" expanded="false" />
+                <element signature="e#188#189#0" expanded="true" />
+                <element signature="e#236#237#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -86,12 +90,16 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/Linha.java" />
         <option value="$PROJECT_DIR$/src/Rascunho.java" />
         <option value="$PROJECT_DIR$/src/Main.java" />
         <option value="$PROJECT_DIR$/src/MapeamentoDeHabilidades.java" />
         <option value="$PROJECT_DIR$/src/HabilidadePorPosicao.java" />
         <option value="$PROJECT_DIR$/src/Principal.java" />
+        <option value="$PROJECT_DIR$/src/Linha.java" />
+        <option value="$PROJECT_DIR$/src/LinhaEnem.java" />
+        <option value="$PROJECT_DIR$/src/mapaDasRespostasDoAluno.java" />
+        <option value="$PROJECT_DIR$/src/mapaDasQuestoesDoAluno.java" />
+        <option value="$PROJECT_DIR$/src/mapaDasHabilidadesDoAluno.java" />
       </list>
     </option>
   </component>
@@ -474,23 +482,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Linha.java">
+    <entry file="file://$PROJECT_DIR$/src/mapaDasQuestoesDoAluno.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="459" max-vertical-offset="595">
           <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Rascunho.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="136" max-vertical-offset="374">
-          <caret line="8" column="32" selection-start-line="8" selection-start-column="32" selection-end-line="8" selection-end-column="32" />
           <folding>
-            <element signature="e#94#95#0" expanded="false" />
-            <element signature="e#134#135#0" expanded="false" />
-            <element signature="e#246#247#0" expanded="false" />
-            <element signature="e#286#287#0" expanded="false" />
+            <element signature="e#172#173#0" expanded="true" />
+            <element signature="e#218#219#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -513,23 +511,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Linha.java">
+    <entry file="file://$PROJECT_DIR$/src/mapaDasQuestoesDoAluno.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="459" max-vertical-offset="595">
           <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Rascunho.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="136" max-vertical-offset="374">
-          <caret line="8" column="32" selection-start-line="8" selection-start-column="32" selection-end-line="8" selection-end-column="32" />
           <folding>
-            <element signature="e#94#95#0" expanded="false" />
-            <element signature="e#134#135#0" expanded="false" />
-            <element signature="e#246#247#0" expanded="false" />
-            <element signature="e#286#287#0" expanded="false" />
+            <element signature="e#172#173#0" expanded="true" />
+            <element signature="e#218#219#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -552,23 +540,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Linha.java">
+    <entry file="file://$PROJECT_DIR$/src/mapaDasQuestoesDoAluno.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="459" max-vertical-offset="595">
           <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Rascunho.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="136" max-vertical-offset="374">
-          <caret line="8" column="32" selection-start-line="8" selection-start-column="32" selection-end-line="8" selection-end-column="32" />
           <folding>
-            <element signature="e#94#95#0" expanded="false" />
-            <element signature="e#134#135#0" expanded="false" />
-            <element signature="e#246#247#0" expanded="false" />
-            <element signature="e#286#287#0" expanded="false" />
+            <element signature="e#172#173#0" expanded="true" />
+            <element signature="e#218#219#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -589,15 +567,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Rascunho.java">
+    <entry file="file://$PROJECT_DIR$/src/Principal.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="374">
-          <caret line="8" column="32" selection-start-line="8" selection-start-column="32" selection-end-line="8" selection-end-column="32" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="867" max-vertical-offset="2108">
+          <caret line="100" column="0" selection-start-line="100" selection-start-column="0" selection-end-line="100" selection-end-column="0" />
           <folding>
-            <element signature="e#94#95#0" expanded="false" />
-            <element signature="e#134#135#0" expanded="false" />
-            <element signature="e#246#247#0" expanded="false" />
-            <element signature="e#286#287#0" expanded="false" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -610,20 +585,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Linha.java">
+    <entry file="file://$PROJECT_DIR$/src/mapaDasQuestoesDoAluno.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="459">
-          <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
-          <folding />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="272">
+          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding>
+            <element signature="e#172#173#0" expanded="true" />
+            <element signature="e#218#219#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Principal.java">
+    <entry file="file://$PROJECT_DIR$/src/mapaDasHabilidadesDoAluno.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.73492604" vertical-offset="1020" max-vertical-offset="2108">
-          <caret line="98" column="61" selection-start-line="98" selection-start-column="61" selection-end-line="98" selection-end-column="61" />
+        <state vertical-scroll-proportion="0.21274175" vertical-offset="0" max-vertical-offset="879">
+          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#188#189#0" expanded="true" />
+            <element signature="e#236#237#0" expanded="true" />
           </folding>
         </state>
       </provider>
