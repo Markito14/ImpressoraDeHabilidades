@@ -3,7 +3,10 @@ import au.com.bytecode.opencsv.CSVReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
+import java.util.List;
 
 public class Principal {
 
@@ -17,7 +20,7 @@ public class Principal {
         try {
             reader = new CSVReader(new FileReader("C:\\Users\\Alisson\\Desktop\\HABILIDADES.csv"), ';', '\"', 1);
         } catch (FileNotFoundException e) {
-            System.out.print("Arquivo não encontrado");
+            System.out.print("Arquivo não encontrado.");
         }
 
         String [] linha;
@@ -45,25 +48,68 @@ public class Principal {
                 idProvaAnterior = idProva;
             }
         } catch (IOException e) {
-            System.out.print("Tentou ler nulo");
+            System.out.print("Tentou ler nulo.");
+        }
+        try {
+            reader.close();
+        } catch (IOException e) {
+            System.out.print("Erro ao fechar arquivo.");
         }
 
-        // Agora vamos ler, linha a linha, o arquivo do ENEM do estado
+        List<String[]> arquivoFinal = new ArrayList<>();
+        ArrayList<String> linhaFinal;
+
+        /*
+        Agora vamos ler, linha a linha, o arquivo do ENEM do estado, para que a linha seja copiada e editada, virando
+        linhaFinal, que será adicionada a arquivoFinal para impressão ao término de tudo.
+        */
 
         String[] estados = {"AC", "AL", "AM", "AP", "BA", "CE", "DF", "ES", "GO", "MA", "MG", "MS", "MT", "PA",
                 "PB", "PE", "PI", "PR",  "RJ", "RN", "RO", "RR", "RS", "SC", "SE", "SP", "TO"};
-        for (String estado : estados) {
-            try {
+        String[] areasDoConhecimento = {"CN", "CH", "LC", "MT"};
+
+        for (String estado : estados) { //roda o programa para todos os .csv's, de todos os estados
+            try { // load inicial, apenas para arrumar o cabeçalho
+                reader = new CSVReader(new FileReader("C:\\Users\\Alisson\\Desktop\\" + estado + ".csv"), ';');
+            } catch (FileNotFoundException e) {
+                System.out.print("Arquivo não encontrado.");
+            }
+            try { // arrumando o cabeçalho (tirando as questoes e colocando as habilidades)
+                linhaFinal = (ArrayList<String>) Arrays.asList(reader.readNext());
+                for (int i = 20; i < 200; i++) {
+                    linhaFinal.remove(i);
+                }
+                for (String area : areasDoConhecimento) {
+                    for (int i = 1; i <= 30; i++) {
+                        linhaFinal.add("HAB_" + area + "_" + i);
+                    }
+                }
+                linhaFinal.trimToSize();
+                arquivoFinal.add((String[]) linhaFinal.toArray());
+            } catch (IOException e) {
+                System.out.print("Tentou ler nulo.");
+            }
+
+            try { // arrumando cada linha
                 reader = new CSVReader(new FileReader("C:\\Users\\Alisson\\Desktop\\" + estado + ".csv"), ';', '\"', 1);
             } catch (FileNotFoundException e) {
-                System.out.print("Arquivo não encontrado");
+                System.out.print("Arquivo não encontrado.");
             }
             try {
                 while ((linha = reader.readNext()) != null) {
-                    System.out.print(linha[0] + " ");
+
+
+
+
+
+
+
+
+
+
                 }
             } catch (IOException e) {
-                System.out.print("Tentou ler nulo");
+                System.out.print("Tentou ler nulo.");
             }
         }
 
