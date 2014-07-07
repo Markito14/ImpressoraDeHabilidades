@@ -96,7 +96,20 @@ public class Principal {
                 System.out.print("Arquivo não encontrado.");
             }
             try {
+                mapaDasQuestoesDoAluno mapaDasQuestoes = new mapaDasQuestoesDoAluno();
+                mapaDasHabilidadesDoAluno mapaDasHabilidades = new mapaDasHabilidadesDoAluno();
+                int j = 1;
                 while ((linha = reader.readNext()) != null) {
+                    // j = 1 => CN
+                    // j = 2 => CH
+                    // j = 3 => LC
+                    // j = 4 => MT
+                    idProva =  Integer.parseInt(linha[8 + j]);
+                    int[] respostasDoAluno = new int[45];
+                    for (int i = 0; i < 45; i++) {
+                        respostasDoAluno[i] = Integer.parseInt(linha[i+20 + ((j-1) * 45)]);
+                    }
+                        mapaDasQuestoes.respostasPorId.put(idProva,respostasDoAluno);
 
 
 
@@ -105,8 +118,7 @@ public class Principal {
 
 
 
-
-
+                j++;
                 }
             } catch (IOException e) {
                 System.out.print("Tentou ler nulo.");
