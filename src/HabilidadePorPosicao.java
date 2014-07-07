@@ -2,28 +2,11 @@ import java.util.HashMap;
 
 public class HabilidadePorPosicao {
 
-    private int id;
-    private HashMap tabela;
+    public HashMap tabela; // key = numero da questao, value = id da habilidade
 
-    public HabilidadePorPosicao(int id, HashMap tabela) {
-        this.id = id;
-        this.tabela = tabela;
+    public HabilidadePorPosicao() {
+
+        tabela = new HashMap();
+
     }
-
-    public int getId() {
-        return id;
-    }
-
-    public HashMap getTabela() {
-        return tabela;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public void setTabela(HashMap tabela) {
-        this.tabela = tabela;
-    }
-
 }
