@@ -2,11 +2,14 @@ import java.util.HashMap;
 
 public class HabilidadePorPosicao {
 
-    public HashMap tabela; // key = numero da questao, value = id da habilidade
+    public HashMap areaDoConhecimentoPorIdProva;
+    public HashMap mapaPorIdProva;
+    public HashMap habilidadePorNumeroDaQuestao; // key = numero da questao, value = id da habilidade
 
     public HabilidadePorPosicao() {
-
-        tabela = new HashMap();
+        mapaPorIdProva = new HashMap();
+        habilidadePorNumeroDaQuestao = new HashMap();
+        areaDoConhecimentoPorIdProva = new HashMap();
 
     }
 }
