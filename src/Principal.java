@@ -48,6 +48,7 @@ public class Principal {
                 habilidadePorNumeroDaQuestao.put(idPosicao,idHabilidade); //populando habilidadePorNumeroDaQuestao
                 idProvaAnterior = idProva;
             }
+            mapaGeralDasHabilidades.mapaPorIdProva.put(idProvaAnterior,habilidadePorNumeroDaQuestao); //salva a ultima prova
         } catch (IOException e) {
             System.out.print("Tentou ler nulo.");
         }
@@ -94,11 +95,16 @@ public class Principal {
             }
 
             try { // arrumando cada uma das outras linhas
-                mapaDasQuestoesDoAluno mapaDasQuestoes = new mapaDasQuestoesDoAluno();
-                mapaDasHabilidadesDoAluno mapaDasHabilidades = new mapaDasHabilidadesDoAluno();
                 while ((linha = reader.readNext()) != null) { //para cada aluno, que correponde a uma linha
-                    mapaDasQuestoes.respostasPorId.clear();
-                    for (int j = 1; j < 5; j++) { //preenchendo o mapaDasQuestoes
+
+                    //iniciamos com o preenchimento do mapaDasQuestoes
+
+                    mapaDasQuestoesDoAluno mapaDasQuestoes = new mapaDasQuestoesDoAluno();
+                    mapaDasHabilidadesDoAluno mapaDasHabilidades = new mapaDasHabilidadesDoAluno();
+                    int[] questoesTemp;
+                    int[] habilidadesTemp = new int[30];
+                    mapaDasQuestoes.lingua = Integer.parseInt(linha[13]); //especificando a lingua escolhida pelo aluno
+                    for (int j = 1; j < 5; j++) {
                         // j = 1 => CN
                         // j = 2 => CH
                         // j = 3 => LC
@@ -110,13 +116,43 @@ public class Principal {
                         }
                         mapaDasQuestoes.respostasPorId.put(idProva, respostasDoAluno);
                     }
-                    for (int i = 0; i < 4; i++) { //preenchendo o mapaDasHabilidades
-                        // quero pegar cada uma das 4 provas e ir buscando a habilidade de cada questao pra
-                        // preencher no mapa de habilidades
-                        for (int key : mapaDasQuestoes.respostasPorId.keySet()) {
 
+                    //vamos agora ao preenchimento do mapaDasHabilidades
+
+                    for (int key : mapaDasQuestoes.respostasPorId.keySet()) {
+                        questoesTemp = mapaDasQuestoes.respostasPorId.get(key); //respostas do aluno
+                        areaDoConhecimento = mapaGeralDasHabilidades.areaDoConhecimentoPorIdProva.get(key); //area do conhecimento
+                        habilidadePorNumeroDaQuestao = mapaGeralDasHabilidades.mapaPorIdProva.get(key); //relacao quest/hab
+                        if (!areaDoConhecimento.equals("LC")) {
+                            for (int i = 0; i < 45; i++) { //para cada questao
+                                habilidadesTemp[habilidadePorNumeroDaQuestao.get(i + 1) - 1] = questoesTemp[i]; //preenche as habilidades
+                            }
+                            mapaDasHabilidades.mapaPorAreaDoConhecimento.put(areaDoConhecimento, habilidadesTemp); //insere no mapa
+                        }
+                        else {
+                            //para as 5 primeiras questoes e necessario saber a lingua escolhida pelo aluno
+                            if (mapaDasQuestoes.lingua == 0) { //caso a lingua seja ingles
+                                for (int i = 0; i < 5; i++) { //para cada questao
+                                    habilidadesTemp[habilidadePorNumeroDaQuestao.get(i + 101) - 1] = questoesTemp[i]; //preenche as habilidades
+                                }
+                                mapaDasHabilidades.mapaPorAreaDoConhecimento.put(areaDoConhecimento, habilidadesTemp); //insere no mapa
+                            }
+                            else { //caso a lingua seja espanhol
+                                for (int i = 0; i < 5; i++) { //para cada questao
+                                    habilidadesTemp[habilidadePorNumeroDaQuestao.get(i + 201) - 1] = questoesTemp[i]; //preenche as habilidades
+                                }
+                                mapaDasHabilidades.mapaPorAreaDoConhecimento.put(areaDoConhecimento, habilidadesTemp); //insere no mapa
+                            }
+                            //para as demais questoes, funciona normalmente
+                            for (int i = 5; i < 45; i++) { //para cada questao
+                                habilidadesTemp[habilidadePorNumeroDaQuestao.get(i + 1) - 1] = questoesTemp[i]; //preenche as habilidades
+                            }
+                            mapaDasHabilidades.mapaPorAreaDoConhecimento.put(areaDoConhecimento, habilidadesTemp); //insere no mapa
                         }
                     }
+
+                    // por fim, vamos modificar a linha e adicionar a nova linha ao nosso arquivoFinal
+
                 }
             } catch (IOException e) {
                 System.out.print("Tentou ler nulo.");
