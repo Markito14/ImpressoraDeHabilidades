@@ -1,9 +1,14 @@
 import au.com.bytecode.opencsv.CSVReader;
+import au.com.bytecode.opencsv.CSVWriter;
 
 import java.io.FileNotFoundException;
 import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.List;
 
 public class Principal {
 
@@ -73,7 +78,7 @@ public class Principal {
 
         for (String estado : estados) { //roda o programa para todos os .csv's, de todos os estados
             try { // load inicial, apenas para arrumar o cabeçalho
-                reader = new CSVReader(new FileReader("C:\\Users\\Alisson\\Desktop\\" + estado + ".csv"), ';');
+                reader = new CSVReader(new FileReader("C:\\Users\\Alisson\\Desktop\\Estados_por_questao\\" + estado + ".csv"), ';');
             } catch (FileNotFoundException e) {
                 System.out.print("Arquivo não encontrado.");
             }
@@ -177,7 +182,19 @@ public class Principal {
 
             // agora vamos imprimir o arquivo final
 
-            
+            CSVWriter writer = null;
+            try {
+                writer = new CSVWriter(new FileWriter("C:\\Users\\Alisson\\Desktop\\Estados_por_habilidade\\" + estado + "_POR_HABILIDADE.csv"), ';');
+            } catch (IOException e) {
+                System.out.print("Erro ao criar arquivo.");
+            }
+            writer.writeAll(arquivoFinal);
+            try {
+                writer.close();
+            } catch (IOException e) {
+                System.out.print("Erro ao fechar arquivo.");
+            }
+            arquivoFinal.clear(); // limpando o arquivo final
         }
 
     }
