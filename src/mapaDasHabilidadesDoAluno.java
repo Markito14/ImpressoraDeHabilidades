@@ -7,12 +7,12 @@ public class mapaDasHabilidadesDoAluno {
         2 = LC
         3 = MT
     */
-    public HashMap mapaPorAreaDoConhecimento; //key = area do conhecimento, value = mapa habilidadesPorId correspondente
-    public HashMap habilidadesPorId; //key = id da habilidade, value = int[30]
+    public HashMap<Integer,HashMap<Integer,int[]>> mapaPorAreaDoConhecimento; //key = area do conhecimento, value = mapa habilidadesPorId correspondente
+    public HashMap<Integer,int[]> habilidadesPorId; //key = id da habilidade, value = int[30]
 
     public mapaDasHabilidadesDoAluno() {
-        habilidadesPorId = new HashMap();
-        mapaPorAreaDoConhecimento = new HashMap();
+        habilidadesPorId = new HashMap<>();
+        mapaPorAreaDoConhecimento = new HashMap<>();
     }
 
 }

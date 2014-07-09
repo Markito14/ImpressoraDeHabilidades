@@ -24,7 +24,7 @@ public class Principal {
         int idProvaAnterior = 0;
         String areaDoConhecimento;
         HabilidadePorPosicao mapaGeralDasHabilidades = new HabilidadePorPosicao();
-        HashMap habilidadePorNumeroDaQuestao = new HashMap();  // key = numero da questao, value = id da habilidade
+        HashMap<Integer, Integer> habilidadePorNumeroDaQuestao = new HashMap<>();  // key = numero da questao, value = id da habilidade
 
         try {
             while ((linha = reader.readNext()) != null) {
@@ -111,8 +111,9 @@ public class Principal {
                         mapaDasQuestoes.respostasPorId.put(idProva, respostasDoAluno);
                     }
                     for (int i = 0; i < 4; i++) { //preenchendo o mapaDasHabilidades
-                        
-                        for (int j = 0; j < 45; j++) {
+                        // quero pegar cada uma das 4 provas e ir buscando a habilidade de cada questao pra
+                        // preencher no mapa de habilidades
+                        for (int key : mapaDasQuestoes.respostasPorId.keySet()) {
 
                         }
                     }

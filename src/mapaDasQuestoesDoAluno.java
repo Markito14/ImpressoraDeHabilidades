@@ -2,9 +2,9 @@ import java.util.HashMap;
 
 public class mapaDasQuestoesDoAluno {
 
-    public HashMap respostasPorId; //key = ID_PROVA, value = int[45]
+    public HashMap<Integer, int[]> respostasPorId; //key = idProva, value = int[45]
 
     public mapaDasQuestoesDoAluno() {
-        respostasPorId = new HashMap(4);
+        respostasPorId = new HashMap<>();
     }
 }
