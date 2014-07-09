@@ -1,9 +1,9 @@
 import java.util.HashMap;
 
-public class mapaDasHabilidadesDoAluno {
+public class MapaDasHabilidadesDoAluno {
     public HashMap<String,int[]> mapaPorAreaDoConhecimento; //key = area do conhecimento, value = mapa habilidadesPorId correspondente
 
-    public mapaDasHabilidadesDoAluno() {
+    public MapaDasHabilidadesDoAluno() {
         mapaPorAreaDoConhecimento = new HashMap<>();
     }
 
