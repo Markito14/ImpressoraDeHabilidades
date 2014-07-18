@@ -131,6 +131,13 @@ public class Principal {
                         habilidadePorNumeroDaQuestao = mapaGeralDasHabilidades.mapaPorIdProva.get(key); //relacao quest/hab
                         if (!areaDoConhecimento.equals("LC")) { //para CN, CH e MT
                             for (int i = 0; i < 45; i++) { //para cada questao
+                                /*
+                                i+1 ocorre porque o vetor de habilidades vai de 0 a 44 enquanto as questoes estao numeradas de
+                                1 a 45 pelo INEP.
+
+                                o -1 de "habilidadePorNumeroDaQuestao.get(i + 1) - 1" ocorre porque o vetor de habilidades
+                                vai de 0 a 29 enquanto as habilidades sao nomeadas de 1 a 30 pelo INEP.
+                                 */
                                 habilidadesTemp[habilidadePorNumeroDaQuestao.get(i + 1) - 1] += questoesTemp[i];
                             }
                             mapaDasHabilidades.mapaPorAreaDoConhecimento.put(areaDoConhecimento, habilidadesTemp.clone());
@@ -153,7 +160,7 @@ public class Principal {
                             }
                             mapaDasHabilidades.mapaPorAreaDoConhecimento.put(areaDoConhecimento, habilidadesTemp.clone());
                         }
-                        habilidadesTemp = new int[30];
+                        habilidadesTemp = new int[30]; //resetando vetor habilidadesTemp para ser usado novamente no prox. loop
                     }
 
                     // por fim, vamos modificar a linha e adicionar a nova linha ao nosso arquivoFinal
